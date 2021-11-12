@@ -37,9 +37,9 @@
             <hr>
             <table class="table table-striped table-hover">
                 <thead class="table-info text-center">
-                    <tr>
-                    <td colspan="5">Create Order</td>
-                    </tr>
+                    <!-- <tr>
+                        <a class="btn btn-primary btn-sm btn-block" href="{% url 'create_order' %}">Create Order</a>
+                    </tr> -->
                 </thead>
                 <tbody>
                     <tr>
@@ -54,8 +54,8 @@
                         <td>{{order.product}}</td>
                         <td>{{order.date_created}}</td>
                         <td>{{order.status}}</td>
-                        <td><a class="btn btn-sm btn-info" href="">Update</a></td>
-                        <td><a class="btn btn-sm btn-outline-danger" href="">Delete</a></td>
+                        <td><a class="btn btn-sm btn-info" href="{% url 'update_order' order.id %}">Update</a></td>
+                        <td><a class="btn btn-sm btn-outline-danger" href="{% url 'delete_order' order.id %}">Delete</a></td>
                     </tr>
 
                 {% endfor %}
