@@ -62,9 +62,9 @@ if config('MODE')=="dev":
        'default': {
            'ENGINE': 'django.db.backends.postgresql_psycopg2',
            'NAME': config('DB_NAME'),
-           'USER': 'barry',
-           'PASSWORD': '1234',
-           'HOST': 'localhost',
+           'USER': config('DB_USER'),
+           'PASSWORD': config('DB_PASSWORD'),
+           'HOST': config('DB_HOST'),
            'PORT': '',
        }
        
