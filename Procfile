@@ -1,1 +1,1 @@
-web: gunicorn tribune.wsgi --log-file -
+web: gunicorn tribune.wsgi --preload -b 0.0.0.0:5000
