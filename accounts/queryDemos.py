@@ -57,6 +57,9 @@ for order in FirstCustomer.order_set.all():
 class parentModel(models.Model):
     name = models.CharField(max_length=200, null=True)
     
+# class parentModel(models.Model):
+#     parant = models.ForeignKey(parentModel)
+    
 class parentModel(models.Model):
     parent = models.ForeignKey(parentModel)
     name = models.CharField(max_length=200, null=True)
